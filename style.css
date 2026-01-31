@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 40px;
+}
+
+#box {
+  width: 200px;
+  height: 200px;
+  background: #555;
+  margin: 30px auto;
+  cursor: pointer;
+}
+
+#box.ready {
+  background: #2ecc71;
+}
