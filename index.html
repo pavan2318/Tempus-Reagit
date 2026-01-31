@@ -8,24 +8,39 @@
 </head>
 <body>
 
-  <div class="container">
-    <h1>Tempus-Reagit</h1>
-    <p id="subtitle">Simple Reaction Time Task (SRT)</p>
+<div class="container">
 
-    <p id="info">
-      Remain idle. Respond only when the stimulus appears.
-    </p>
+  <h1>Tempus-Reagit</h1>
+  <p id="subtitle">Simple Reaction Time Task (SRT)</p>
 
-    <div id="box"></div>
+  <p id="info">
+    Remain idle. Respond only when the stimulus appears.
+  </p>
 
-    <p id="status"></p>
-    <p id="result"></p>
-    <p id="average"></p>
-    <p id="best"></p>
+  <div class="controls">
+    <label>
+      Trials
+      <input type="number" id="trialInput" value="10" min="5" max="50">
+    </label>
 
-    <button id="exportBtn">Export CSV</button>
+    <label>
+      Lapse threshold (ms)
+      <input type="number" id="lapseInput" value="500" min="200" max="1000">
+    </label>
   </div>
 
-  <script src="game.js"></script>
+  <div id="box"></div>
+
+  <p id="status"></p>
+  <p id="result"></p>
+  <p id="average"></p>
+  <p id="median"></p>
+  <p id="lapses"></p>
+
+  <button id="exportBtn">Export CSV</button>
+
+</div>
+
+<script src="game.js"></script>
 </body>
 </html>
