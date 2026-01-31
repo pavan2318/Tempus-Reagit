@@ -26,6 +26,10 @@ For each session, the following metrics are recorded:
 - Average reaction time across valid trials
 - Fastest recorded reaction time (persisted locally)
 - Number of false starts
+- Mean reaction time
+- Median reaction time
+- Lapse count based on configurable threshold
+
 
 All timing measurements are performed client side using system timestamps.
 
@@ -66,6 +70,16 @@ Session results can be exported as a CSV file containing:
 
 This allows results to be inspected offline or imported into spreadsheet or statistical analysis tools.
 
+Each trial record includes:
+- Trial number
+- Reaction time
+- Absolute timestamp (ISO 8601)
+- Lapse flag
+- False start flag
+
+Session parameters such as lapse threshold are included in the export.
+
+
 ---
 
 ## Technical implementation
@@ -92,6 +106,13 @@ Measured reaction times are influenced by:
 Results should be interpreted as indicative and comparative rather than diagnostic.
 
 ---
+## Lapse definition
+
+A lapse is defined as any reaction time exceeding a configurable threshold (default: 500 ms).
+
+This follows common PVT conventions where lapses are used as indicators of reduced vigilance or fatigue rather than average performance alone.
+
+---
 
 ## Version history
 
@@ -116,6 +137,13 @@ Results should be interpreted as indicative and comparative rather than diagnost
 - Touch friendly interface adjustments
 - Visual refinement to reduce cognitive distraction
 - Improved layout stability across screen sizes
+
+### v1.4
+- Added lapse threshold definition and reporting
+- Added mean vs median comparison
+- Added per trial timestamp logging
+- Introduced user configurable session parameters
+- Visual redesign for mobile and touch first use
 
 ---
 
